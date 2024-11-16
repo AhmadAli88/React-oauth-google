@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import BasicTypingEffect from './components/Basic Typing Effect';
+import AdjustableSpeedTypingEffect from './components/Controlling Typing Speed Dynamically';
+import StyledTypingEffect from './components/Custom Typed Text Styling';
+import PlaceholderEffect from './components/Dynamic Placeholder Text';
+import DynamicTypedEffect from './components/Dynamic Strings from an API';
+import HeroSection from './components/Integrating with Hero Sections';
+import SingleCycleTypingEffect from './components/Single Cycle Typing';
+import TypingEffectWithCallbacks from './components/Typing Effect with Callbacks';
+import MixedContentEffect from './components/Typing Effects with Static and Dynamic Content';
+import MultiLanguageTyping from './components/Multi-Language Typing';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <BasicTypingEffect />
+      <StyledTypingEffect />
+      <PlaceholderEffect />
+      <DynamicTypedEffect />
+      <TypingEffectWithCallbacks />
+      <HeroSection />
+      <AdjustableSpeedTypingEffect />
+      <MixedContentEffect />
+      <SingleCycleTypingEffect />
+      <MultiLanguageTyping />
+    </div>
+  );
 }
 
-export default App
+export default App;
